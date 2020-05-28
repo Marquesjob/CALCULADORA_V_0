@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container w-100 p-3 h-100 d-inline-block">
+        <form>
+            <div class="row">
+              <div class=" col align-self-center">
+                <input type="text" class="form-control" placeholder="valor 1" id="valor1">
+              </div>
+              <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Selecionar operação
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="#" id="somar" onclick="somar()">Somar</a>
+                  <a class="dropdown-item" href="#" id="subtrair" onclick="subtrair()">Subtrair</a>
+                  <a class="dropdown-item" href="#" id="dividir" onclick="divisao()">Dividir</a>
+                  <a class="dropdown-item" href="#" id="multiplicar" onclick="multiplicar()">Multiplicar</a>
+                </div>
+              </div>
+              <div class="col align-self-center">
+                <input type="text" class="form-control" placeholder="valor 2" id="valor2">
+              </div>
+              <div class="col align-self-center">
+                <input type="text" class="form-control" placeholder="produto" id="product">
+              </div>
+            </div>
+          </form>
+    </div>
+    <script>
+      
+      function somar(){
+
+        let text_value1 = document.getElementById('valor1')
+        let text_value2 = document.getElementById('valor2')
+        let number_value1 = Number(text_value1.value)
+        let number_value2 = Number(text_value2.value)
+        let product_value = number_value1 + number_value2  
+        let product_box = document.getElementById('product')
+        product_box.value = product_value
+
+      }
+
+      function subtrair() {
+    
+        let text_value1 = document.getElementById('valor1')
+        let text_value2 = document.getElementById('valor2')
+        let number_value1 = Number(text_value1.value)
+        let number_value2 = Number(text_value2.value)
+        let product_value = number_value1 - number_value2
+        let product_box = document.getElementById('product')
+        product_box.value = product_value
+      }  
+
+      function multiplicar() {
+
+        let text_value1 = document.getElementById('valor1')
+        let text_value2 = document.getElementById('valor2')
+        let number_value1 = Number(text_value1.value)
+        let number_value2 =  Number(text_value2.value)
+        let product_value = number_value1 * number_value2
+        let product_box = document.getElementById('product')
+        product_box.value = product_value
+      }
+
+      function divisao() {
+        let text_value1 = document.getElementById('valor1')
+        let text_value2 = document.getElementById('valor2')
+        let number_value1 = Number(text_value1.value)
+        let number_value2 = Number(text_value2.value)
+        let product_value = number_value1 / number_value2
+        let product_box = document.getElementById('product')
+        product_box.value = product_value
+
+      }
+    </script>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>
